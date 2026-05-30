@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jyothi Bhavani | Professional Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7ff;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:16px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(10px);
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#2563eb;
+}
+
+nav ul{
+display:flex;
+gap:28px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#2563eb;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:110px 8% 60px;
+background:
+linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80');
+
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:55px;
+align-items:center;
+}
+
+.hero-content h4{
+font-size:22px;
+color:#93c5fd;
+margin-bottom:15px;
+}
+
+.hero-content h1{
+font-size:62px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero-content span{
+color:#60a5fa;
+}
+
+.hero-content p{
+font-size:18px;
+line-height:1.9;
+max-width:700px;
+color:#e5e7eb;
+}
+
+.hero-image img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 35px rgba(0,0,0,.35);
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 34px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#1d4ed8;
+transform:translateY(-5px);
+}
+
+/* SECTION */
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.title h2{
+font-size:40px;
+color:#1e3a8a;
+margin-bottom:12px;
+}
+
+.title p{
+font-size:17px;
+line-height:1.8;
+max-width:800px;
+margin:auto;
+color:#666;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:45px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.about-text p{
+font-size:17px;
+line-height:1.9;
+color:#555;
+}
+
+/* SKILLS */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:22px;
+}
+
+.skill-card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+text-align:center;
+}
+
+.skill-card:hover{
+transform:translateY(-10px);
+background:#2563eb;
+color:white;
+}
+
+.skill-card img{
+width:75px;
+height:75px;
+object-fit:cover;
+border-radius:50%;
+margin-bottom:15px;
+}
+
+.skill-card h3{
+margin-bottom:12px;
+}
+
+/* EDUCATION */
+
+.education{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:22px;
+}
+
+.edu-card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.edu-card:hover{
+transform:translateY(-10px);
+}
+
+.edu-card h3{
+color:#2563eb;
+margin-bottom:15px;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.project-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.project-content{
+padding:22px;
+}
+
+.project-content h3{
+margin-bottom:12px;
+color:#2563eb;
+}
+
+.project-content p{
+line-height:1.8;
+color:#555;
+}
+
+/* CERTIFICATIONS */
+
+.certifications{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:22px;
+}
+
+.cert-card{
+background:white;
+padding:30px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.cert-card:hover{
+transform:translateY(-10px);
+background:#2563eb;
+color:white;
+}
+
+/* CONTACT */
+
+.contact{
+background:#0f172a;
+color:white;
+padding:45px;
+border-radius:20px;
+max-width:850px;
+margin:auto;
+}
+
+.contact h2{
+font-size:34px;
+margin-bottom:25px;
+color:#60a5fa;
+text-align:center;
+}
+
+.contact-info{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.contact-box{
+background:rgba(255,255,255,.08);
+padding:18px 20px;
+border-radius:14px;
+font-size:16px;
+transition:.3s;
+line-height:1.8;
+}
+
+.contact-box:hover{
+background:#2563eb;
+transform:translateY(-5px);
+}
+
+.contact-box a{
+color:white;
+text-decoration:none;
+word-break:break-word;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+.hero-container,
+.about,
+.contact-info{
+grid-template-columns:1fr;
+}
+
+.hero-content h1{
+font-size:42px;
+}
+
+nav ul{
+display:none;
+}
+
+.title h2{
+font-size:34px;
+}
+
+.contact{
+padding:30px 20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Portfolio</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+<div class="hero-content">
+
+<h4>👋 Hello, I'm</h4>
+
+<h1>
+JyothiBhavani <span>Geddam</span>
+</h1>
+
+<p>
+Passionate and motivated B.Tech student aspiring to become a
+Full Stack Developer. I love building responsive, attractive
+and user-friendly websites using modern web technologies.
+Focused on improving programming skills, frontend development
+and creating innovative digital experiences.
+</p>
+
+<a href="#projects" class="btn">
+🚀 Explore My Work
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="title">
+
+<h2>About Me</h2>
+
+<p>
+A quick introduction about my educational journey,
+technical interests and career goals.
+</p>
+
+</div>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80">
+
+<div class="about-text">
+
+<p>
+
+I am currently pursuing Bachelor of Technology at
+Aditya College of Engineering and Technology.
+
+<br><br>
+
+I am passionate about software development,
+frontend designing and learning modern technologies.
+
+<br><br>
+
+I have knowledge in C, Java, Python basics,
+HTML, CSS, JavaScript and SQL.
+
+I am a quick learner, team player and always motivated
+to improve my technical and communication skills.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="title">
+
+<h2>Technical Skills</h2>
+
+<p>
+Technologies and tools I use to build responsive
+and interactive web applications.
+</p>
+
+</div>
+
+<div class="skills">
+
+<div class="skill-card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+
+<h3>🌐 HTML & CSS</h3>
+
+<p>
+Building responsive and modern websites.
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">
+
+<h3>⚡ JavaScript</h3>
+
+<p>
+Creating interactive and dynamic web features.
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+
+<h3>☕ Java</h3>
+
+<p>
+Understanding object-oriented programming concepts.
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png">
+
+<h3>🐍 Python</h3>
+
+<p>
+Problem-solving and beginner-level Python programming.
+</p>
+
+</div>
+
+<div class="skill-card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png">
+
+<h3>🗄 SQL</h3>
+
+<p>
+Managing databases and writing SQL queries.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+<div class="title">
+
+<h2>Education</h2>
+
+<p>
+My current academic qualification and learning journey.
+</p>
+
+</div>
+
+<div class="education">
+
+<div class="edu-card">
+
+<h3>🎓 Bachelor of Technology</h3>
+
+<p>
+
+Aditya College of Engineering and Technology
+
+<br><br>
+
+2024 - 2028 (Expected)
+
+<br><br>
+
+CGPA : 8.36
+
+</p>
+
+</div>
+
+<div class="edu-card">
+
+<h3>💻 Learning Focus</h3>
+
+<p>
+
+Frontend Development
+
+<br><br>
+
+Web Designing
+
+<br><br>
+
+Programming & Problem Solving
+
+</p>
+
+</div>
+
+<div class="edu-card">
+
+<h3>🚀 Career Goal</h3>
+
+<p>
+
+To become a skilled Full Stack Developer and contribute
+to innovative software projects.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="title">
+
+<h2>Projects</h2>
+
+<p>
+Projects developed during internship tasks and self-learning practice.
+</p>
+
+</div>
+
+<div class="projects">
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80">
+
+<div class="project-content">
+
+<h3>☕ Urban Brew Café Website</h3>
+
+<p>
+Designed a modern café website with responsive layout,
+attractive UI and stylish menu sections using HTML and CSS.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80">
+
+<div class="project-content">
+
+<h3>📊 Mini CRM System</h3>
+
+<p>
+Developed a responsive Client Lead Management System
+for managing leads and tracking customer follow-ups.
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80">
+
+<div class="project-content">
+
+<h3>🌟 Personal Portfolio Website</h3>
+
+<p>
+Created a professional portfolio website showcasing
+skills, education, certifications and projects.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section>
+
+<div class="title">
+
+<h2>Certifications</h2>
+
+<p>
+Certifications completed during my academic
+and technical learning journey.
+</p>
+
+</div>
+
+<div class="certifications">
+
+<div class="cert-card">
+
+<h3>🏅 C Essentials 1</h3>
+
+<p>
+Cisco Networking Academy
+</p>
+
+</div>
+
+<div class="cert-card">
+
+<h3>📜 HTML & CSS</h3>
+
+<p>
+IT Specialist Certification
+</p>
+
+</div>
+
+<div class="cert-card">
+
+<h3>💡 Frontend Development</h3>
+
+<p>
+Internship Practice Projects
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="contact">
+
+<h2>📞 Contact Me</h2>
+
+<div class="contact-info">
+
+<div class="contact-box">
+📧 <b>Email</b><br>
+jyothibhavani804@gmail.com
+</div>
+
+<div class="contact-box">
+📱 <b>Phone</b><br>
++91 9346164804
+</div>
+<div class="contact-box">
+📍 <b>Location</b><br>
+Andhra Pradesh,India
+</div>
+<div class="contact-box">
+💼 <b>LinkedIn</b><br>
+<a href="https://linkedin.com/in/jyothibhavani-geddam" target="_blank">
+linkedin.com/in/jyothibhavani-geddam
+</a>
+</div>
+
+<div class="contact-box">
+💻 <b>GitHub</b><br>
+<a href="https://github.com/jyothibhavani804" target="_blank">
+github.com/jyothibhavani804
+</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
